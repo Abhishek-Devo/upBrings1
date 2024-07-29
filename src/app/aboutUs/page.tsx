@@ -11,7 +11,15 @@ const AboutUs = () => {
       <div className="bg-white text-black min-h-screen pt-16"> {/* pt-16 to offset the fixed navbar height */}
         
         <main className="container mx-auto px-4 py-8">
-          <img src="/images/aboutUs/Child-Support.jpg" alt="Children" className="w-full h-64 object-cover rounded-lg shadow-lg mb-8" width={300} height={200}/>
+        <Image
+        src="/images/aboutUs/Child-Support.jpg"
+        alt="Children"
+        width={300}
+        height={200}
+        className="w-full h-64 object-cover rounded-lg shadow-lg mb-8"
+        layout="responsive"
+      />
+
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">UpBrings Foundation</h1>
           <h2 className="text-2xl md:text-3xl font-semibold text-center text-green-400 mb-8">A Non-Profit Organization</h2>
           <p className="text-xl mb-12 leading-relaxed">
