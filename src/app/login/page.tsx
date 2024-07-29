@@ -21,12 +21,12 @@ export default function LoginPage() {
             //axios is used to request to server
             const response = await Axios.post("/api/users/login", user);   
             router.push("/home")
-            toast.success('Successfully LoggedIn',{duration:1000})            
+            toast.success('Successfully LoggedIn',{duration:2000})            
             setLoading(false)
         } 
         catch (error: any) {
             console.log("Login Failed", error.message)
-            toast.error(error.message, { duration: 2000 })
+            toast.error("login failed ", { duration: 2000 })
         }
          finally {
             setLoading(false)
@@ -34,7 +34,7 @@ export default function LoginPage() {
     }
 
     useEffect(() => {
-        if (user.email.length > 13 && user.password.length > 1 && user.email.includes('@gmail.com')) {
+        if (user.email.length > 13 && user.password.length > 5 &&  (user.email.includes('@gmail.com') || user.email.includes('@outlook.com'))) {
             setButtonEnabled(true)
         } else {
             setButtonEnabled(false)

@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import  {useRouter} from 'next/navigation';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import axios from 'axios';
@@ -19,10 +19,12 @@ export default function Navbar() {
       console.log("Logout success");
       router.push('/login');
       toast.success("Logout Successful", { duration: 2000 });
-    } catch (error: any) {
+    }
+     catch (error: any) {
       console.log('Failed to Logout', error);
       toast.error(error.message, { duration: 2000 });
-    } finally {
+    }
+     finally {
       setLoading(false);
     }
   };

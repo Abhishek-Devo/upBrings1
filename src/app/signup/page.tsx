@@ -28,7 +28,7 @@ export default function SignupPage() {
         catch (error: any) {
             console.log("signup failed :(", error)
             toast.dismiss()
-            toast.error(error.response.data.error, { duration: 2000 })
+            toast.error('signup failed :(,Try again', { duration: 2000 })
         }
         finally {
             setLoading(false)
@@ -36,7 +36,7 @@ export default function SignupPage() {
     }
 
     useEffect(() => {
-        if (user.email.length > 14 && user.password.length > 5 && user.username.length > 3) {
+        if (user.email.length > 13 && user.password.length > 5 && user.username.length > 3 && (user.email.includes('@gmail.com') || user.email.includes('@outlook.com'))) {
             setButtonEnabled(true)
         } else {
             setButtonEnabled(false)
