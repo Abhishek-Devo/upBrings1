@@ -19,7 +19,7 @@ export async function connect():Promise<void>{
     }
     catch(error){
         console.log('database connection failed',error)
-        process.exit(1)
+        
         
     }   
 }

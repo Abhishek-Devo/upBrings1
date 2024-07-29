@@ -160,7 +160,7 @@ export default function FeedBack() {
                 disabled={!buttonEnabled}
                 className="inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                {buttonEnabled ? "Submit" : "Enter your Message"}
+                {buttonEnabled ? "Submit" : "Message should of minimum 50 chars :)"}
               </button>
             </form>
           </div>

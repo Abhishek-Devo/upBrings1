@@ -3,7 +3,8 @@
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 import { useState } from 'react';
-import Modal from '@/components/modal';
+import Modal from '@/components/Modal';
+import Image from 'next/image';
 
 export default function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,7 +47,7 @@ export default function Home() {
 
                 {/* Right Section */}
                 <div className="right hidden md:block w-full md:w-1/2">
-                    <img src="/images/homeImg/pic4.jpg" alt="pic4" className="object-cover w-full h-full rounded-lg shadow-lg" />
+                    <Image src="/images/homeImg/pic4.jpg" alt="pic4" className="object-cover w-full h-full rounded-lg shadow-lg" width={500} height={300} />
                 </div>
             </div>
 
