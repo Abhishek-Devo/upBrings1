@@ -29,11 +29,12 @@ export default function Home() {
                         
                     </div>
                     <p className="text-gray-700 mb-8">
-                        UpBrings Foundation is an educational NGO that has a vision, a dream to educate every unprivileged child in our country. It's a long journey, but we're determined to make a difference. We started on the streets and moved on to villages, and since then, we've never looked back. Running an educational NGO for underprivileged children has become our passion.
-                        <br />
-                        <br />
-                        In the modern world, education is necessary to survive. The digital revolution has taken over the world, and everything has gone online. It becomes even more necessary to provide education to the future of this country. UpBrings Foundation is a force determined to bring about a permanent change.
-                    </p>
+    UpBrings Foundation is an educational NGO that has a vision, a dream to educate every unprivileged child in our country. It&apos;s a long journey, but we&apos;re determined to make a difference. We started on the streets and moved on to villages, and since then, we&apos;ve never looked back. Running an educational NGO for underprivileged children has become our passion.
+    <br />
+    <br />
+    In the modern world, education is necessary to survive. The digital revolution has taken over the world, and everything has gone online. It becomes even more necessary to provide education to the future of this country. UpBrings Foundation is a force determined to bring about a permanent change.
+</p>
+
                     <div className="flex gap-4">
                         <button 
                             className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"

@@ -2,6 +2,7 @@
 'use client'
 import Navbar from '@/components/Navbar';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 
 const NGOEvent = () => {
@@ -29,7 +30,7 @@ const NGOEvent = () => {
               <h3 className="text-blue-500 text-xl font-bold">Free Education Camp</h3>
             </div>
             <div className="border border-gray-300 p-5 rounded-md">
-              <img src="images/eventspic/preview.jpg" alt="Free Education Camp" className="w-full h-auto mb-5" />
+              <Image src="images/eventspic/preview.jpg" alt="Free Education Camp" className="w-full h-auto mb-5" />
               <p className="text-gray-800 font-bold">About the Event</p>
               <p className="text-gray-800">We are excited to announce a Free Education Camp for underprivileged children, aimed at providing quality educational support and opportunities.</p>
               <button className="btn btn-primary bg-blue-500 rounded" onClick={() => setModal('event1')}>More Details</button>
@@ -40,7 +41,7 @@ const NGOEvent = () => {
               <h3 className="text-blue-500 text-xl font-bold">Health Awareness Camp</h3>
             </div>
             <div className="border border-gray-300 p-5 rounded-md">
-              <img src="images/eventspic/preview1.jpg" alt="Health Awareness Camp" className="w-full h-auto mb-5" />
+              <Image src="images/eventspic/preview1.jpg" alt="Health Awareness Camp" className="w-full h-auto mb-5" />
               <p className="text-gray-800 font-bold">About the Event</p>
               <p className="text-gray-800">The Health Awareness Camp is aimed at educating children about the importance of health and wellness. It will include sessions on nutrition, exercise, mental health, and preventive healthcare.</p>
               <button className="btn btn-primary bg-blue-500 rounded " onClick={() => setModal('event2')}>More Details</button>
@@ -51,7 +52,7 @@ const NGOEvent = () => {
               <h3 className="text-blue-500 text-xl font-bold">Food Distribution</h3>
             </div>
             <div className="border border-gray-300 p-5 rounded-md">
-              <img src="images/eventspic/Untitled design.png" alt="Food Distribution" className="w-full h-auto mb-5" />
+              <Image src="images/eventspic/Untitled design.png" alt="Food Distribution" className="w-full h-auto mb-5" />
               <p className="text-gray-800 font-bold">About the Event</p>
               <p className="text-gray-800">The Food Distribution event is dedicated to providing essential food supplies to families in need. This initiative aims to combat hunger and ensure that everyone has access to nutritious food.</p>
               <button className="btn btn-primary bg-blue-500 rounded" onClick={() => setModal('event3')}>More Details</button>

@@ -24,8 +24,7 @@ const AboutUs = () => {
             UpBrings Foundation is one of the eminent non-profit organisations engaged in providing a better future to underprivileged children. We believe that education is the basis of development, thus we provide education to children to enhance their future as well as the country&apos;s. We have been able to arrange basic necessities for children and work as a team for their betterment. UpBrings is strongly aligned with the &apos;Right to Education Act&apos; or the &apos;Samagra Shiksha,&apos; committed to improving access to primary education for children, especially underprivileged ones. Our goal is to improve access and quality of education, based on the belief <strong>&quot;TO PROVIDE EVERY CHILD A TOOL TO WRITE THEIR OWN DESTINY&quot;.</strong>
           </p>
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
-            <img src="/images/aboutUs/CLIPART.png" alt="Education Clipart" className="w-80 mb-8 md:mb-0 md:mr-8" />
-            <div>
+          <Image  src="/images/aboutUs/CLIPART.png"  alt="Education Clipart"  width={320} height={200} />
               <h2 className="text-2xl font-semibold mb-4 text-green-400">Education is the key to unlock the golden door of opportunities</h2>
               <ul className="text-lg space-y-4">
                 <li>We focus on not just teaching books but more importantly life values.</li>
