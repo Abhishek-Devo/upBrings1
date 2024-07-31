@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import Image from 'next/image';
-import  {useRouter} from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import axios from 'axios';
@@ -11,20 +11,23 @@ export default function Navbar() {
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Method for logout, executed when user clicks on Log out button
   const onLogOut = async () => {
     try {
       setLoading(true);
       const response = await axios.get("/api/users/logout");
-      console.log("Logout success");
-      router.push('/login');
-      toast.success("Logout Successful", { duration: 2000 });
-    }
-     catch (error: any) {
+
+      if (response.status === 200 && response.data.success) {
+        console.log("Logout success");
+        toast.success("Logout Successful", { duration: 2000 });
+        router.push('/login');
+      } else {
+        console.log('Failed to Logout, status:', response.status);
+        toast.error("Failed to Logout", { duration: 2000 });
+      }
+    } catch (error:any) {
       console.log('Failed to Logout', error);
       toast.error(error.message, { duration: 2000 });
-    }
-     finally {
+    } finally {
       setLoading(false);
     }
   };
@@ -55,10 +58,12 @@ export default function Navbar() {
           <li><Link href="/galleryPage" className="hover:text-green-400 transition duration-300 text-lg">Gallery</Link></li>
           <li><Link href="/contactUs" className="hover:text-green-400 transition duration-300 text-lg">Contact</Link></li>
           <li>
-            <button onClick={onLogOut} className="bg-gray-500 text-white py-1 px-4 rounded hover:bg-red-600 transition duration-300">{loading ? "Logging Out" : "Log Out"}</button>
+            <button onClick={onLogOut} className="bg-gray-500 text-white py-1 px-4 rounded hover:bg-red-600 transition duration-300">
+              {loading ? "Logging Out" : "Log Out"}
+            </button>
           </li>
         </ul>
       </div>
     </nav>
   );
-};
+}

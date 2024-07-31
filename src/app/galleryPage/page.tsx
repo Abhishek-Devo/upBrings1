@@ -14,8 +14,8 @@ const GalleryPage = () => {
 
   return (
     <>
-    <Navbar/>   
-    
+    <Navbar/>    
+    <br/>
     <br/>
     <div className="w-full py-8 text-center">
       <h1 className="text-5xl uppercase leading-tight pb-8 text-gray-800 tracking-wide">Gallery</h1>
