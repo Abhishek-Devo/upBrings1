@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function POST() {
   try {
     // Creating a response object of NextResponse to interact with cookies
     const response = NextResponse.json({
