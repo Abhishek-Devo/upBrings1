@@ -14,7 +14,7 @@ export default function Navbar() {
   const onLogOut = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("/api/users/logout");
+      const response = await axios.post("/api/users/logout");
 
       if (response.status === 200 && response.data.success) {
         console.log("Logout success");
